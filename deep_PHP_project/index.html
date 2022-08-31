@@ -1,0 +1,110 @@
+<!-- Form content: 
+Employee(EId,Ename,Gender,Age,City)
+Depertment(DId,Dname,Location)
+Works(EId,DId,date-from,date-to) -->
+<?php
+include 'dbconnect.php';
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $Age=$_POST['Age'];
+    $city=$_POST['city'];
+    $gender=$_POST['gender'];
+    $Dname=$_POST['Dname'];
+    $Location=$_POST['Location'];
+    $date_from=$_POST['date_from'];
+    $sql="INSERT INTO `employee` (`EID`, `First_Name`, `Last_Name`, `Age`, `City`, `Gender`) VALUES (NULL, '$fname', '$lname', '$Age', '$city', '$gender')";
+    $sql1="INSERT INTO `depertment` (`DID`, `DName`, `Location`) VALUES (NULL, '$Dname', '$Location')";
+    $sql2="INSERT INTO `work` (`EID`, `DID`, `Date-from`, `Date-to`) VALUES ('1', '1', '$date_from', '2022-08-27');";
+}
+?>
+
+
+<!DOCTYPE HTML>
+<html>
+   <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+   </head> 
+   <body>
+    <div class = "main">
+        <div class="Employee">
+            <h2>Employee Details</h2>
+            <form id="register" method="post" action="index.php">
+                <div class="Fname">
+                    <label>First Name :</label>
+                    <br>
+                    <input type="text" name="fname" id="name" placeholder="Enter your first name">
+                    <br>
+                </div>
+                <div class="Lname">
+                    <br>
+                    <label >Last Name:</label>
+                    <br>
+                    <input type="text" name="lname" id="name" placeholder="Enter your last name">
+                    <br>
+                </div>
+                <div class="Age">
+                    <br>
+                    <label >Age :</label>
+                    <br>
+                    <input type="number" name="Age" id="Age" placeholder="Enter your Age">
+                    <br>
+                </div>
+                <div class="city">
+                    <br>
+                    <label >City:</label>
+                    <br>
+                    <input type="text" name="city" id="name" placeholder="Enter your city">
+                    <br>
+                </div>
+                <div class="gender">
+                    <br>
+                    <label >Gender :</label>
+                    <br>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <span id="male">Male</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" id="female" value="female">
+                    <span id="female">Female</span>
+                    <br>
+                </div>
+            </form>
+        </div>
+        <div class="Depertment">
+            <h2>Depertment Details Of Employee</h2>
+            <form id="depertment" method="post">
+                <div class="dipname">
+                    <label>Depertment Name :</label>
+                    <br>
+                    <input type="text" name="Dname" id="name" placeholder="Enter your dipertment">
+                    <br>
+                </div>
+                <div class="location">
+                    <br>
+                    <label >Location :</label>
+                    <br>
+                    <input type="text" name="Location" id="Location" placeholder="Enter your Location">
+                    <br>
+                </div>
+            </form>
+        </div>
+        <div class="Work">
+            <h2>Work Experience</h2>
+            <form id="work" method="post">
+                <label>Date of Joining :</label>
+                <br>
+                <input type="date" name="date_from" id="date-from">
+                <br>
+            </form>
+        </div>
+        <div class="submit">
+            <form id="submit" method="post">
+                <br><br>
+                <input type="submit" value="submit" name="submit" id="submit">
+                <br>
+            </form>
+        </div>
+    </div>
+   </body>
+</html>

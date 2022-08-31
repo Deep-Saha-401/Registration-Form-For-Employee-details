@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(img.jpg);
+    background-size: 280%;
+    background-position: -400px 0px ;
+    justify-content: center;
+    align-items: center;
+}
+div.main{
+    width: 400px;
+    margin: 100px auto 12px auto;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: medium;
+}
+div.Employee{
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 7px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) ;
+    color: #fff;
+    padding: 15px 10px;
+    justify-content: center;
+    align-items: center;
+}
+div.Depertment{
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 7px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) ;
+    color: #fff;
+    padding: 15px 10px;
+}
+div.Work{
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 7px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) ;
+    color: #fff;
+    padding: 15px 10px;
+}
+form#Employee{
+    margin: 40px;
+}
+label{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: italic;
+}
+input#name{
+    width: 120px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0px;
+    padding: 3px;
+    background-color: rgb(245, 240, 240);
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+input#submit{
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(250, 100, 55, 0.8) ;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);    
+}
+label,span,h2{
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
